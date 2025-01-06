@@ -42,7 +42,7 @@ const PlayVideo = ({videoId}) => {
       <div className="publisher">
        <img src={jack} alt='' />
        <div>
-        <p>Great API</p>
+        <p>{apiData?apiData.snippet.channelTitle : ""}</p>
         <span>1M Subscribers</span>
        </div>
        <button>Subscribe</button>
