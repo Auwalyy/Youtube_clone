@@ -18,7 +18,7 @@ const PlayVideo = ({videoId}) => {
     const video_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
     await fetch(video_url).then(response=>response.json()).then(data=>setApiData(data.items[0]))
   }
-
+  // useEffect
   useEffect(()=>{
     fetchVideoData();
   },[videoId])
